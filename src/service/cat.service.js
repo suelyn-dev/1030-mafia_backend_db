@@ -2,7 +2,7 @@
 
 import { getAllCats } from "../repositories/cat.repositories.js";
 
-export function allCats() {
-    const cats = getAllCats()
+export async function allCats() {
+    const cats = await getAllCats()
     return cats
 }
