@@ -209,3 +209,43 @@ PS C:\Users\suely\Desktop\FIAE 2026\Webentwicklung\1030 backend_DB> git log --on
 44d2412 Testcommit  main
 bf4e81d Erster Commit
 PS C:\Users\suely\Desktop\FIAE 2026\Webentwicklung\1030 backend_DB> 
+
+PS C:\Users\suely\Desktop\FIAE 2026\Webentwicklung\1030 backend_DB> git add .                                       
+PS C:\Users\suely\Desktop\FIAE 2026\Webentwicklung\1030 backend_DB> git commit -m "boilerplate and example.env"
+[dev b7e086a] boilerplate and example.env
+ 3 files changed, 224 insertions(+)
+ create mode 100644 .env.example
+PS C:\Users\suely\Desktop\FIAE 2026\Webentwicklung\1030 backend_DB> git push -u origin main
+branch 'main' set up to track 'origin/main'.
+Everything up-to-date
+PS C:\Users\suely\Desktop\FIAE 2026\Webentwicklung\1030 backend_DB> git push -u origin dev 
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 3.09 KiB | 1.54 MiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'dev' on GitHub by visiting:
+remote:      https://github.com/suelyn-dev/1030-mafia_backend_db/pull/new/dev
+remote: 
+To https://github.com/suelyn-dev/1030-mafia_backend_db.git
+ * [new branch]      dev -> dev
+branch 'dev' set up to track 'origin/dev'
+
+
+Standardkonfiguration Server:
+
+import express from "express"
+
+process.loadEnvFile(".env") //--> wegen Umgebungsvariable
+const PORT = process.env.PORT || 8080 //Sicherheits-backup
+
+const app = express() //damit ich meine express ANwenudng nutzen kann
+
+app.use(cors()) //Middleware die sich um das PORT-Problem kümmert
+app.use(express.json()) //Middleware die meine Daten richtig umwandelt
+
+
+
+app.listen(PORT, () => console.log("Ein Mauzi erscheint in Port", PORT)) //Port starten
