@@ -5,6 +5,7 @@ import {router as catRouter} from "./src/router/cat.router.js"
 import {router as clanRouter} from "./src/router/clan.router.js"
 
 
+
 process.loadEnvFile(".env") //--> wegen Umgebungsvariable
 const PORT = process.env.PORT || 8080 //Sicherheits-backup
 

@@ -1,4 +1,4 @@
-
+//Präsentationsschicht
 import express from "express" //Referenz da schon im index
 
 export const router = new express.Router()
