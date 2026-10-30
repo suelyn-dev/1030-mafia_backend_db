@@ -1,4 +1,5 @@
 import express from "express"
+import cors from "cors"
 
 process.loadEnvFile(".env") //--> wegen Umgebungsvariable
 const PORT = process.env.PORT || 8080 //Sicherheits-backup
