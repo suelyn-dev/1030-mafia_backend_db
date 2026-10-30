@@ -1,15 +1,17 @@
 //Datenbankkommunikation - Datenzugriffsschicht
-import { connection } from "../utilities/db.js"
+import { pool } from "../utilities/db.js"
 
 export async function getAllCats() {
-
-    const db = await connection()
+    const conn = await pool.getConnection()
     try {
-        const [rows] = await db.query("SELECT * FROM katzen")
+        const res = await conn.query("SELECT * FROM katzen")
+        console.log(res)
+        const [rows] = res
         return rows
-    } catch (error) {
-        throw error
+
+    } catch(err) {
+        throw err
     } finally {
-        db.end() //damit die Verbindung nach jedem Aufruf beendet wird
+        conn.release()
     }
 }
