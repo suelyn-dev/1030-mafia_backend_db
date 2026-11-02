@@ -5,6 +5,7 @@ import "dotenv/config"
 //Router importieren
 import {router as catRouter} from "./src/router/cat.router.js"
 import {router as clanRouter} from "./src/router/clan.router.js"
+import {router as gebieteRouter} from "./src/router/gebiete.router.js"
 
 
 
@@ -17,6 +18,7 @@ app.use(express.json()) //Middleware die meine Daten richtig umwandelt
 //Router einbinden
 app.use("/api", catRouter)
 app.use("/api", clanRouter)
+app.use("/api", gebieteRouter)
 
 
 
