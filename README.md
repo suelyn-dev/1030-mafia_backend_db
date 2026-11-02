@@ -1,3 +1,16 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
 PS C:\Users\suely\Desktop\FIAE 2026\Webentwicklung\1030 backend_DB> npm init -y
 Wrote to C:\Users\suely\Desktop\FIAE 2026\Webentwicklung\1030 backend_DB\package.json:
 

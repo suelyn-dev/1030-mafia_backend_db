@@ -8,5 +8,8 @@ export const pool = mysql.createPool({
     database: process.env.DB_DATABASE,
 
     connectionLimit: 10,
-    waitForConnections: true
+    waitForConnections: true,
+
+    //Platzhalter freischalten
+    namedPlaceholders: true
 })
