@@ -8,6 +8,7 @@ import "dotenv/config"
 import {router as catRouter} from "./src/router/cat.router.js"
 import {router as clanRouter} from "./src/router/clan.router.js"
 import {router as gebieteRouter} from "./src/router/gebiete.router.js"
+import {router as streunerRouter} from "./src/router/streuner.router.js"
 
 
 
@@ -26,6 +27,7 @@ app.use(cookieParser()) //damit Backend Cookies lesen kann, die der Browser bei 
 app.use("/api/v1", catRouter)
 app.use("/api/v1", clanRouter)
 app.use("/api/v1", gebieteRouter)
+app.use("/api/v1", streunerRouter)
 
 
 app.listen(PORT, () => console.log("Ein Mauzi erscheint in Port", PORT)) //Port starten
