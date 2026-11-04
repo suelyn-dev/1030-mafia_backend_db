@@ -17,8 +17,8 @@ export async function getAllGebiete() {
 
 export async function changeClanId(ids) {
     try {
-        const sql = `UPDATE gebiete SET clan_id = ? WHERE ID = ?`
-        const [row] = await pool.execute(sql,[ids.clanid, ids.regionid]) //pool.execute macht das automatisch
+        const sql = `UPDATE gebiete SET clan_id = ? WHERE gebiete_id = ?`
+        const [row] = await pool.execute(sql,[ids.clanId, ids.regionId]) //pool.execute macht das automatisch
         return row
     } catch(err) {
         console.log(err);

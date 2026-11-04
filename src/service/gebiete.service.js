@@ -1,4 +1,4 @@
-import { getAllGebiete } from "../repositories/gebiete.repositories.js";
+import { changeClanId, getAllGebiete } from "../repositories/gebiete.repositories.js";
 
 export async function allGebiete() {
     const gebiete = await getAllGebiete()
@@ -6,5 +6,6 @@ export async function allGebiete() {
 }
 
 export async function changeRegionClan(data) {
-    console.log();
+    const result = await changeClanId(data)
+    return result
 }
