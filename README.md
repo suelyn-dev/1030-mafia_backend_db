@@ -1,4 +1,9 @@
+# Cookies
+npm i cookie-parser
 
+in index:
+import cookieParser from "cookie-parser"
+app.use(cookieParser())
 
 
 
