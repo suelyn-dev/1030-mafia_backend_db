@@ -29,5 +29,4 @@ app.use("/api/v1", clanRouter)
 app.use("/api/v1", gebieteRouter)
 app.use("/api/v1", streunerRouter)
 
-
 app.listen(PORT, () => console.log("Ein Mauzi erscheint in Port", PORT)) //Port starten
