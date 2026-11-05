@@ -42,7 +42,11 @@ export async function assignStreunerIdCash(catId, clanId) {
             SET fische = fische - (SELECT gehalt FROM katzen WHERE katzen_id = ?) WHERE clan_id = ?
             AND fische >= (SELECT gehalt FROM katzen WHERE katzen_id = ?);`, [catId, clanId, catId])
             //Alternativ im Terminal: ALTER TABLE clan MODIFY fische INT UNSIGNED DEFAULT 0;
-
+        
+        if (res2.affectedRows === 0) {
+            throw new Error("Nicht genug Fische im Clan vorhanden!");
+        }
+        
         await conn.commit();
 
         return {res1, res2}

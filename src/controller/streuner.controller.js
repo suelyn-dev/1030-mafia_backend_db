@@ -43,10 +43,10 @@ export async function assignStreuner(req, res) {
     } catch (error) {
         console.log("Fehler im Controller", error.message);
 
-        /* return res.status(400).json({ 
+        return res.status(400).json({ 
             success: false, 
             error: error.message || 'Fehler beim Anheuern des Streuners.' 
-        }); */
+        });
     }
     
 }
