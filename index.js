@@ -17,7 +17,7 @@ const app = express() //damit ich meine express Anwendung nutzen kann
 
 //Middlewares
 app.use(cors({               //kümmert sich um das PORT-Problem
-    origin: "http://127.0.0.1:5500", //spezifiziert, damit Cookies funktionieren
+    origin: "http://127.0.0.1:5501", //spezifiziert, damit Cookies funktionieren
     credentials: true                
 })); 
 app.use(express.json()) //damit Daten richtig umgewandelt werden
